@@ -12,4 +12,8 @@ export class ModulesComponent implements OnInit {
   ngOnInit() {
   }
 
+  onModalShow(show) {
+    console.log(show);
+    
+  }
 }

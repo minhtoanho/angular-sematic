@@ -5,6 +5,6 @@
     <div class="ui segment">
         <h1 class="ui header">Modal</h1>
         <button class="ui button" (click)="modal.show()">show Modal</button>
-        <semui-modal #modal></semui-modal>
+        <semui-modal (onShow)="onModalShow($event)" #modal></semui-modal>
     </div>
 </div>

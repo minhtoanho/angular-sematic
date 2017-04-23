@@ -9,6 +9,8 @@ declare var jQuery: any;
 })
 export class ModalComponent implements OnInit, OnDestroy {
 
+  @Output() onShow: EventEmitter<Boolean> = new EventEmitter();
+  @Output() onHide: EventEmitter<Boolean> = new EventEmitter();
   @ViewChild('modal') modal: ElementRef;
 
   constructor() { }
@@ -17,11 +19,13 @@ export class ModalComponent implements OnInit, OnDestroy {
   }
 
   show(data?: {}) {
-    jQuery(this.modal.nativeElement).modal('toggle');
+    jQuery(this.modal.nativeElement).modal('show');
+    this.onShow.emit(true);
   }
 
   hide() {
     jQuery(this.modal.nativeElement).modal('hide');
+    this.onHide.emit(true);
   }
 
   ngOnDestroy() {
