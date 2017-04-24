@@ -1,16 +1,13 @@
 <div class="ui modal" #modal>
     <i class="close icon"></i>
-    <div class="header">
+    <ng-content select="[modal-header]"></ng-content>
+    <!--<div class="header">
         <ng-content select="[modal-header]"></ng-content>
-    </div>
-    <div class="image content">
-        <div class="image">
-            An image can appear on left or an icon
-        </div>
-        <div class="description">
-            A description can appear on the right
-        </div>
-    </div>
+    </div>-->
+    <ng-content select="[modal-content]"></ng-content>
+    <!--<div class="image content">
+
+    </div>-->
     <div class="actions">
         <div class="ui button">Cancel</div>
         <div class="ui button">OK</div>

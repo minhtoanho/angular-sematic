@@ -1,5 +1,5 @@
 <p>
-    modules works!
+    Modules usage demo
 </p>
 <div class="ui segments">
     <div class="ui segment">
@@ -7,7 +7,16 @@
         <button class="ui button" (click)="modal.show()">show Modal</button>
         <semui-modal (onShow)="onModalShow($event)" #modal>
             <h1 class="ui header" modal-header>
-                <i class="icon book"></i> Modal title</h1>
+                <i class="icon book"></i> Modal title
+            </h1>
+            <div class="image content" modal-content>
+                <div class="image">
+                    An image can appear on left or an icon
+                </div>
+                <div class="description">
+                    A description can appear on the right
+                </div>
+            </div>
         </semui-modal>
     </div>
 </div>
